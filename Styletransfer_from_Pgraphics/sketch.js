@@ -4,6 +4,11 @@ let style1;
 let statusMsg;
 let transferBtn;
 
+function preload(){
+    style1 = ml5.styleTransfer('wave', modelLoaded)
+//    ();
+}
+
 function setup() {
     createCanvas(640, 480)
     pg = createGraphics(width, height)
@@ -16,7 +21,7 @@ function setup() {
     transferBtn = select('#transferBtn')
     transferBtn.mousePressed(transferImages);
 
-    style1 = new ml5.StyleTransfer('wave', modelLoaded);
+
 
 }
 
@@ -35,6 +40,7 @@ function transferImages() {
   statusMsg.html('Applying Style Transfer...!');
 
   style1.transfer(pg, function(err, result) {
+      console.log(result, err)
     createImg(result.src).parent('styleA');
   });
 
