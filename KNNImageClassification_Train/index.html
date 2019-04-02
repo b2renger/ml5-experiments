@@ -1,0 +1,49 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/p5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.dom.min.js"></script>
+    <script src="https://unpkg.com/ml5@0.2.3/dist/ml5.min.js" type="text/javascript"></script>
+
+    <style>
+        body {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        button {
+            margin: 6px 6px 6px 0;
+            padding: 4px;
+            font-size: 14px;
+        }
+
+        video {
+            width: 600;
+            height: 600;
+        }
+
+        p {
+            display: inline;
+            font-size: 16px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div>
+        <p id="status">Loading Model...</p>
+    </div>
+    <div>
+        <p id="images">Loading Images...</p>
+    </div>
+
+    <script src="sketch.js"></script>
+</body>
+
+</html>
