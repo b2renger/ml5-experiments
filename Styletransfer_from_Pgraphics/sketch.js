@@ -11,7 +11,7 @@ function preload(){
 
 function setup() {
     createCanvas(640, 480)
-    pg = createGraphics(width, height)
+    pg = createGraphics(640, 480)
     pg.background(0)
     pg.pixelDensity(1)
 
@@ -41,7 +41,7 @@ function transferImages() {
 
   style1.transfer(pg, function(err, result) {
       console.log(result, err)
-    createImg(result.src).parent('styleA');
+   // createImg(result.src).parent('styleA');
   });
 
 
